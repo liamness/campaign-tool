@@ -1,0 +1,388 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "councillor.16",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Hackney Central",
+        "councillor1_name": "Cllr Ben Hayhurst",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "ben.hayhurst@hackney.gov.uk",
+        "councillor2_name": "Cllr Sheila Suso-Runge",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "sheila.susorunge@hackney.gov.uk",
+        "councillor3_name": "Cllr Sophie Conway",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "sophie.conway@hackney.gov.uk",
+        "prinx": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.14",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Dalston",
+        "councillor1_name": "Cllr Grace Adebayo",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "grace.adebayo@hackney.gov.uk",
+        "councillor2_name": "Cllr Zoë Garbett",
+        "councillor2_party": "Green Party",
+        "councillor2_contact": "zoe.garbett@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 14
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.3",
+      "geometry": null,
+      "properties": {
+        "ward_name": "De Beauvoir",
+        "councillor1_name": "Cllr Jasmine Martins",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "jasmine.martins@hackney.gov.uk",
+        "councillor2_name": "Cllr Joe Walker",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "joe.walker@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.17",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Homerton",
+        "councillor1_name": "Cllr Robert Chapman",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "robert.chapman@hackney.gov.uk",
+        "councillor2_name": "Cllr Guy Nicholson",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "guy.nicholson@hackney.gov.uk",
+        "councillor3_name": "Cllr Anna Lynch",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "anna.lynch@hackney.gov.uk",
+        "prinx": 17
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.21",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Stamford Hill West",
+        "councillor1_name": "Cllr Benzion Papier",
+        "councillor1_party": "Conservative",
+        "councillor1_contact": "benzion.papier@hackney.gov.uk",
+        "councillor2_name": "Cllr Hershy Lisser",
+        "councillor2_party": "Conservative",
+        "councillor2_contact": "hershy.lisser@hackney.gov.uk",
+        "councillor3_name": null,
+        "councillor3_party": null,
+        "councillor3_contact": null,
+        "prinx": 21
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.8",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Lea Bridge",
+        "councillor1_name": "Cllr Margaret Gordon",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "margaret.gordon@hackney.gov.uk",
+        "councillor2_name": "Cllr Ian Rathbone",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "ian.rathbone@hackney.gov.uk",
+        "councillor3_name": "Cllr Deniz Oguzkanli",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "deniz.oguzkanli@hackney.gov.uk",
+        "prinx": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.9",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Cazenove",
+        "councillor1_name": "Cllr Patrick Pinkerton",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "patrick.pinkerton@hackney.gov.uk",
+        "councillor2_name": "Cllr Sam Pallis",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "sam.pallis@hackney.gov.uk",
+        "councillor3_name": "Cllr Ian Sharer",
+        "councillor3_party": "Conservative",
+        "councillor3_contact": "ian.sharer@hackney.gov.uk",
+        "prinx": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.10",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Springfield",
+        "councillor1_name": "Cllr Simche Steinberger",
+        "councillor1_party": "Conservative",
+        "councillor1_contact": "simche.steinberger@hackney.gov.uk",
+        "councillor2_name": "Cllr Michael Levy",
+        "councillor2_party": "Conservative",
+        "councillor2_contact": "michael.levy@hackney.gov.uk",
+        "councillor3_name": "Cllr Shaul Krautwirt",
+        "councillor3_party": "Conservative",
+        "councillor3_contact": "shaul.krautwirt@hackney.gov.uk",
+        "prinx": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.11",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Kings Park",
+        "councillor1_name": "Cllr Sharon Patrick",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "sharon.patrick@hackney.gov.uk",
+        "councillor2_name": "Cllr Ali Sadek",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "ali.sadek@hackney.gov.uk",
+        "councillor3_name": "Cllr Lynne Joan Troughton",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "lynne.troughton@hackney.gov.uk",
+        "prinx": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.12",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Brownswood",
+        "councillor1_name": "Cllr Soraya Adejare",
+        "councillor1_party": "Labour and Co-operative",
+        "councillor1_contact": "soraya.adejare@hackney.gov.uk",
+        "councillor2_name": "Cllr Clare Potter",
+        "councillor2_party": "Labour and Co-operative",
+        "councillor2_contact": "clare.potter@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.18",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Shacklewell",
+        "councillor1_name": "Cllr Ifraah Samatar",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "ifraah.samatar@hackney.gov.uk",
+        "councillor2_name": "Cllr Richard Lufkin",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "richard.lufkin@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.5",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Hackney Wick",
+        "councillor1_name": "Cllr Christopher Kennedy",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "christopher.kennedy@hackney.gov.uk",
+        "councillor2_name": "Cllr Jess Webb",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "jessica.webb@hackney.gov.uk",
+        "councillor3_name": "Cllr Joseph Ogundemuren",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "joseph.ogundemuren@hackney.gov.uk",
+        "prinx": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.2",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Haggerston",
+        "councillor1_name": "Cllr Jon Narcross",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "jon.narcross@hackney.gov.uk",
+        "councillor2_name": "Cllr Humaira Garasia",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "humaira.garasia@hackney.gov.uk",
+        "councillor3_name": "Cllr Midnight Ross",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "midnight.ross@hackney.gov.uk",
+        "prinx": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.20",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Woodberry Down",
+        "councillor1_name": "Cllr Sarah Joanna Young",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "sarah.young@hackney.gov.uk",
+        "councillor2_name": "Cllr Caroline Selman",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "caroline.selman@hackney.gov.uk",
+        "councillor3_name": null,
+        "councillor3_party": null,
+        "councillor3_contact": null,
+        "prinx": 20
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.7",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Hackney Downs",
+        "councillor1_name": "Cllr Michael Desmond",
+        "councillor1_party": "Labour and Co-operative",
+        "councillor1_contact": "michael.desmond@hackney.gov.uk",
+        "councillor2_name": "Cllr Alastair Binnie-Lubbock",
+        "councillor2_party": "Green Party",
+        "councillor2_contact": "alastair.binnie-lubbock@hackney.gov.uk",
+        "councillor3_name": "Cllr Sem Moema",
+        "councillor3_party": "Labour and Co-operative",
+        "councillor3_contact": "sem.moema@hackney.gov.uk",
+        "prinx": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.1",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Hoxton East and Shoreditch",
+        "councillor1_name": "Cllr Kam Adams",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "kam.adams@hackney.gov.uk",
+        "councillor2_name": "Cllr Faruk Tinaz",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "faruk.tinaz@hackney.gov.uk",
+        "councillor3_name": "Cllr Anya Josephine Sizer",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "anya.sizer@hackney.gov.uk",
+        "prinx": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.4",
+      "geometry": null,
+      "properties": {
+        "ward_name": "London Fields",
+        "councillor1_name": "Cllr Anntoinette Bramble",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "anntoinette.bramble@hackney.gov.uk",
+        "councillor2_name": "Cllr Can Ozsen",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "mcan.ozsen@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.6",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Clissold",
+        "councillor1_name": "Cllr Frank Baffour",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "frank.baffour@hackney.gov.uk",
+        "councillor2_name": "Cllr Fliss Premru",
+        "councillor2_party": "Hackney Independent Socialist Group",
+        "councillor2_contact": "fliss.premru@hackney.gov.uk",
+        "councillor3_name": "Cllr Sade Etti",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "sade.etti@hackney.gov.uk",
+        "prinx": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.13",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Hoxton West",
+        "councillor1_name": "Cllr Clayeon McKenzie",
+        "councillor1_party": "Labour",
+        "councillor1_contact": "clayeon.mckenzie@hackney.gov.uk",
+        "councillor2_name": "Cllr Carole Williams",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "carole.williams@hackney.gov.uk",
+        "councillor3_name": "Cllr Ben Lucas",
+        "councillor3_party": "Labour",
+        "councillor3_contact": "ben.lucas@hackney.gov.uk",
+        "prinx": 13
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.19",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Stoke Newington",
+        "councillor1_name": "Cllr Susan Fajana-Thomas",
+        "councillor1_party": "Labour and Co-operative",
+        "councillor1_contact": "susan.fajanathomas@hackney.gov.uk",
+        "councillor2_name": "Cllr Gilbert Smyth",
+        "councillor2_party": "Labour and Co-operative",
+        "councillor2_contact": "gilbert.smyth@hackney.gov.uk",
+        "councillor3_name": "",
+        "councillor3_party": "",
+        "councillor3_contact": "",
+        "prinx": 19
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "councillor.15",
+      "geometry": null,
+      "properties": {
+        "ward_name": "Victoria",
+        "councillor1_name": "Cllr Claudia Turbet-Delof",
+        "councillor1_party": "Hackney Independent Socialist Group",
+        "councillor1_contact": "claudia.turbet-delof@hackney.gov.uk",
+        "councillor2_name": "Cllr Clare Joseph",
+        "councillor2_party": "Labour",
+        "councillor2_contact": "clare.joseph@hackney.gov.uk",
+        "councillor3_name": "Cllr Penny Wrout",
+        "councillor3_party": "Hackney Independent Socialist Group",
+        "councillor3_contact": "penny.wrout@hackney.gov.uk",
+        "prinx": 15
+      }
+    }
+  ],
+  "totalFeatures": 21,
+  "numberMatched": 21,
+  "numberReturned": 21,
+  "timeStamp": "2024-09-26T17:14:05.075Z",
+  "crs": null
+}
