@@ -1,4 +1,20 @@
 import { useState } from "react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Button,
+  Box,
+  Card,
+  CardBody,
+  FormLabel,
+  Input,
+  Select,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 import { councillorInfo } from "./councillors";
 import { listFormatter } from "./listFormatter";
@@ -43,47 +59,86 @@ function App() {
   )}?subject=${emailSubject}&body=${emailBody}`;
 
   return (
-    <>
-      <label>
-        Name: <input onChange={(e) => setSenderName(e.target.value)} />
-      </label>
-      <label>
-        Ward:{" "}
-        <select onChange={(e) => setWard(e.target.value as Ward)}>
-          {Object.keys(councillorInfo).map((ward) => (
-            <option key={ward}>{ward}</option>
-          ))}
-        </select>
-      </label>
-      <p>
-        Find out which ward you are in by clicking{" "}
-        <a
-          href="https://hackney.gov.uk/constituencies-wards#wards"
-          target="_blank"
-        >
-          here
-        </a>
-      </p>
-      <p>
-        When you're ready, click below and you will be sent to your email
-        client, with our suggested text to send pre-filled:
-      </p>
-      <button
-        onClick={(e) => {
-          // Would prefer not to use window.open(), but Firefox was not co-operating
-          window.open(mailtoLink), e.preventDefault();
-        }}
-      >
-        Send email
-      </button>
+    <Stack spacing="24px" margin="12px auto" maxWidth="640px">
+      <Card marginX="12px">
+        <CardBody>
+          <Stack spacing="1rem">
+            <FormLabel>
+              Enter your name:{" "}
+              <Input
+                onChange={(e) => setSenderName(e.target.value)}
+                marginTop="0.5rem"
+              />
+            </FormLabel>
+            <FormLabel>
+              Select your ward: (if you don't know your ward, you can find it by
+              clicking{" "}
+              <a
+                href="https://hackney.gov.uk/constituencies-wards#wards"
+                target="_blank"
+              >
+                here
+              </a>
+              ){" "}
+              <Select
+                onChange={(e) => setWard(e.target.value as Ward)}
+                marginTop="0.5rem"
+              >
+                <option value="" selected disabled hidden></option>
+                {Object.keys(councillorInfo).map((ward) => (
+                  <option key={ward}>{ward}</option>
+                ))}
+              </Select>
+            </FormLabel>
+            <Text>
+              When you're ready, click below and you will be sent to your email
+              client, with our suggested text to send pre-filled:
+            </Text>
+            <Button
+              onClick={(e) => {
+                // Would prefer not to use window.open(), but Firefox was not co-operating
+                window.open(mailtoLink), e.preventDefault();
+              }}
+              isDisabled={!ward || !senderName}
+              background="blue.800"
+              color="white"
+            >
+              Send email
+            </Button>
+          </Stack>
+        </CardBody>
+      </Card>
 
-      <p>
-        If for some reason clicking that didn't work, please see below for the
-        manual process:
-      </p>
-      <p>Send to: {emails.join(", ")}</p>
-      <p style={{ whiteSpace: "pre" }}>{manualEmailBody}</p>
-    </>
+      <Card marginX="12px">
+        <CardBody>
+          <Stack spacing="1rem">
+            <Text>
+              If for some reason clicking that didn't work, you can copy and
+              paste the template email as shown below into your email client
+              instead:
+            </Text>
+
+            <Accordion allowToggle background="blue.800" borderRadius="md">
+              <AccordionItem>
+                <AccordionButton color="white">
+                  <span style={{ flex: "1" }}>See more</span>
+                  <AccordionIcon />
+                </AccordionButton>
+
+                <AccordionPanel>
+                  <Box background="white" borderRadius="sm" padding="0.5rem">
+                    <Stack spacing="1rem">
+                      <Text>Send to: {emails.join(", ")}</Text>
+                      <Text whiteSpace="pre-wrap">{manualEmailBody}</Text>
+                    </Stack>
+                  </Box>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Stack>
+        </CardBody>
+      </Card>
+    </Stack>
   );
 }
 
