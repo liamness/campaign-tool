@@ -120,7 +120,13 @@ function App() {
               Once you've completed those steps, click below and you will be
               sent to your email client. The mayor, transport lead and your
               local councillors will be set as receipients, and our suggested
-              text to send will be pre-filled:
+              text to send will be pre-filled.
+            </Text>
+
+            <Text>
+              Feel free to just use the text we've prepared as a jumping off
+              point, though. Responses that are more personal and informed by
+              your own experience could potentially be more persuasive.
             </Text>
 
             <Button
