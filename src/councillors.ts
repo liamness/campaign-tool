@@ -199,11 +199,6 @@ export const councillorInfo = {
   ],
   "Woodberry Down": [
     {
-      name: "Cllr Sarah Joanna Young",
-      party: "Labour",
-      contact: "sarah.young@hackney.gov.uk",
-    },
-    {
       name: "Cllr Caroline Selman",
       party: "Labour",
       contact: "caroline.selman@hackney.gov.uk",

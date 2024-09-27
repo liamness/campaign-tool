@@ -17,30 +17,44 @@ import {
 } from "@chakra-ui/react";
 
 import { councillorInfo } from "./councillors";
+import {
+  emailBodyTemplate,
+  emailSubject,
+  manualEmailBodyTemplate,
+} from "./email";
 import { listFormatter } from "./listFormatter";
 
+const wards = Object.keys(councillorInfo).sort();
 const mayor = {
   name: "Mayor Caroline Woodley",
   party: "Labour",
   contact: "mayor@hackney.gov.uk",
 };
-const emailSubject = "Make Pembury Circus Safe for Cycling";
-const emailBodyLines = [
-  "To {{ recipientNames }},",
-  "",
-  "Please put protected space for cycling on Pembury Circus",
-  "",
-  "kthxbai, {{ senderName }}",
-];
-const emailBodyTemplate = emailBodyLines.join("%0D%0A");
-const manualEmailBodyTemplate = emailBodyLines.join("\n");
+const transportLead = {
+  name: "Cllr Sarah Joanna Young",
+  party: "Labour",
+  contact: "sarah.young@hackney.gov.uk",
+};
+// Globally styling components with Chakra seems finicky, so doing this
+const commonCardProps = {
+  border: "1px",
+  borderColor: "gray.400",
+  marginX: "12px",
+  shadow: "lg",
+};
+const commonInputProps = {
+  borderColor: "gray.400",
+  _hover: { borderColor: "teal.200" },
+  marginTop: "0.5rem",
+};
 
 type Ward = keyof typeof councillorInfo;
 
 function App() {
   const [senderName, setSenderName] = useState("");
+  const [senderAddress, setSenderAddress] = useState("");
   const [ward, setWard] = useState<Ward | "">("");
-  const recipients = [mayor];
+  const recipients = [mayor, transportLead];
 
   if (ward) {
     recipients.push(...councillorInfo[ward]);
@@ -48,28 +62,38 @@ function App() {
   const emails = recipients.map((recipient) => recipient.contact);
   const recipientNames = recipients.map((recipient) => recipient.name);
   const formattedReciepientNames = listFormatter(recipientNames);
+  const senderText = senderName + (senderAddress ? ` (${senderAddress})` : "");
   const emailBody = emailBodyTemplate
     .replace("{{ recipientNames }}", formattedReciepientNames)
-    .replace("{{ senderName }}", senderName);
+    .replace("{{ sender }}", senderText);
   const manualEmailBody = manualEmailBodyTemplate
     .replace("{{ recipientNames }}", formattedReciepientNames)
-    .replace("{{ senderName }}", senderName);
+    .replace("{{ sender }}", senderText);
   const mailtoLink = `mailto:${emails.join(
     ","
   )}?subject=${emailSubject}&body=${emailBody}`;
 
   return (
     <Stack spacing="24px" margin="12px auto" maxWidth="640px">
-      <Card marginX="12px">
+      <Card {...commonCardProps}>
         <CardBody>
           <Stack spacing="1rem">
             <FormLabel>
               Enter your name:{" "}
               <Input
                 onChange={(e) => setSenderName(e.target.value)}
-                marginTop="0.5rem"
+                {...commonInputProps}
               />
             </FormLabel>
+
+            <FormLabel>
+              Enter your home address (optional):{" "}
+              <Input
+                onChange={(e) => setSenderAddress(e.target.value)}
+                {...commonInputProps}
+              />
+            </FormLabel>
+
             <FormLabel>
               Select your ward: (if you don't know your ward, you can find it by
               clicking{" "}
@@ -82,18 +106,23 @@ function App() {
               ){" "}
               <Select
                 onChange={(e) => setWard(e.target.value as Ward)}
-                marginTop="0.5rem"
+                defaultValue=""
+                {...commonInputProps}
               >
-                <option value="" selected disabled hidden></option>
-                {Object.keys(councillorInfo).map((ward) => (
+                <option value="" disabled hidden></option>
+                {wards.map((ward) => (
                   <option key={ward}>{ward}</option>
                 ))}
               </Select>
             </FormLabel>
+
             <Text>
-              When you're ready, click below and you will be sent to your email
-              client, with our suggested text to send pre-filled:
+              Once you've completed those steps, click below and you will be
+              sent to your email client. The mayor, transport lead and your
+              local councillors will be set as receipients, and our suggested
+              text to send will be pre-filled:
             </Text>
+
             <Button
               onClick={(e) => {
                 // Would prefer not to use window.open(), but Firefox was not co-operating
@@ -109,7 +138,7 @@ function App() {
         </CardBody>
       </Card>
 
-      <Card marginX="12px">
+      <Card {...commonCardProps}>
         <CardBody>
           <Stack spacing="1rem">
             <Text>

@@ -1,32 +1,6 @@
 import rawData from "./councillors.json" assert { type: "json" };
 
-const wards = [
-  "Brownswood",
-  "Cazenove",
-  "Clissold",
-  "Dalston",
-  "De Beauvoir",
-  "Hackney Central",
-  "Hackney Downs",
-  "Hackney Wick",
-  "Haggerston",
-  "Homerton",
-  "Hoxton East and Shoreditch",
-  "Hoxton West",
-  "Kings Park",
-  "Lea Bridge",
-  "London Fields",
-  "Shacklewell",
-  "Springfield",
-  "Stamford Hill West",
-  "Stoke Newington",
-  "Victoria",
-  "Woodberry Down",
-];
-
-const wardData = {};
-
-rawData.features.forEach((feature) => {
+const result = rawData.features.reduce((wardData, feature) => {
   const { properties } = feature;
   const wardName = properties.ward_name;
   const councillors = [];
@@ -38,11 +12,15 @@ rawData.features.forEach((feature) => {
     };
 
     if (!councillor.contact) continue;
+    // Will include transport lead by default, so skip
+    if (councillor.contact === "sarah.young@hackney.gov.uk") continue;
 
     councillors.push(councillor);
   }
 
   wardData[wardName] = councillors;
-});
 
-console.log(wardData);
+  return wardData;
+}, {});
+
+console.log(result);
