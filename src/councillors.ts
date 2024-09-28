@@ -320,9 +320,7 @@ export const councillorInfo = {
   ],
 };
 
-// Contact transport lead and cabinet members by default
-export const defaultCouncillors = [
-  "sarah.young@hackney.gov.uk",
+export const cabinetMembers = [
   "anntoinette.bramble@hackney.gov.uk",
   "guy.nicholson@hackney.gov.uk",
   "robert.chapman@hackney.gov.uk",
@@ -333,6 +331,10 @@ export const defaultCouncillors = [
   "carole.williams@hackney.gov.uk",
 ];
 
-export const defaultCouncillorsInfo = Object.values(councillorInfo)
+export const cabinetMembersInfo = Object.values(councillorInfo)
   .flat()
-  .filter((councillor) => defaultCouncillors.includes(councillor.contact));
+  .filter((councillor) => cabinetMembers.includes(councillor.contact));
+
+export const transportLead = Object.values(councillorInfo)
+  .flat()
+  .find((councillor) => councillor.contact === "sarah.young@hackney.gov.uk")!;

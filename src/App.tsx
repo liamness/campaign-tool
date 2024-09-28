@@ -18,8 +18,9 @@ import {
 
 import {
   councillorInfo,
-  defaultCouncillors,
-  defaultCouncillorsInfo,
+  cabinetMembers,
+  cabinetMembersInfo,
+  transportLead,
 } from "./councillors";
 import {
   emailBodyTemplate,
@@ -34,6 +35,7 @@ const mayor = {
   party: "Labour",
   contact: "mayor@hackney.gov.uk",
 };
+const defaultCouncillors = [...cabinetMembers, transportLead.contact];
 // Globally styling components with Chakra seems finicky, so doing this
 const commonCardProps = {
   border: "1px",
@@ -53,7 +55,7 @@ function App() {
   const [senderName, setSenderName] = useState("");
   const [senderAddress, setSenderAddress] = useState("");
   const [ward, setWard] = useState<Ward | "">("");
-  const recipients = [mayor, ...defaultCouncillorsInfo];
+  const recipients = [mayor, transportLead, ...cabinetMembersInfo];
 
   if (ward) {
     const wardCouncillors = councillorInfo[ward].filter(
@@ -62,14 +64,19 @@ function App() {
     recipients.push(...wardCouncillors);
   }
   const emails = recipients.map((recipient) => recipient.contact);
-  const recipientNames = recipients.map((recipient) => recipient.name);
-  const formattedReciepientNames = listFormatter(recipientNames);
+  const recipientTextParts = [
+    mayor.name,
+    transportLead.name,
+    "cabinet members",
+    ...(ward ? ["my local councillors"] : []),
+  ];
+  const formattedRecipientText = listFormatter(recipientTextParts);
   const senderText = senderName + (senderAddress ? ` (${senderAddress})` : "");
   const emailBody = emailBodyTemplate
-    .replace("{{ recipientNames }}", formattedReciepientNames)
+    .replace("{{ recipientNames }}", formattedRecipientText)
     .replace("{{ sender }}", senderText);
   const manualEmailBody = manualEmailBodyTemplate
-    .replace("{{ recipientNames }}", formattedReciepientNames)
+    .replace("{{ recipientNames }}", formattedRecipientText)
     .replace("{{ sender }}", senderText);
   const mailtoLink = `mailto:${emails.join(
     ","
@@ -121,7 +128,7 @@ function App() {
             <Text>
               Once you've completed those steps, click below and you will be
               sent to your email client. The mayor, transport lead, cabinet
-              members and your local councillors will be set as receipients, and
+              members and your local councillors will be set as recipients, and
               our suggested text to send will be pre-filled.
             </Text>
 
