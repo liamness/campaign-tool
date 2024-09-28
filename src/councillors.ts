@@ -199,6 +199,11 @@ export const councillorInfo = {
   ],
   "Woodberry Down": [
     {
+      name: "Cllr Sarah Joanna Young",
+      party: "Labour",
+      contact: "sarah.young@hackney.gov.uk",
+    },
+    {
       name: "Cllr Caroline Selman",
       party: "Labour",
       contact: "caroline.selman@hackney.gov.uk",
@@ -314,3 +319,20 @@ export const councillorInfo = {
     },
   ],
 };
+
+// Contact transport lead and cabinet members by default
+export const defaultCouncillors = [
+  "sarah.young@hackney.gov.uk",
+  "anntoinette.bramble@hackney.gov.uk",
+  "guy.nicholson@hackney.gov.uk",
+  "robert.chapman@hackney.gov.uk",
+  "sade.etti@hackney.gov.uk",
+  "susan.fajanathomas@hackney.gov.uk",
+  "christopher.kennedy@hackney.gov.uk",
+  "clayeon.mckenzie@hackney.gov.uk",
+  "carole.williams@hackney.gov.uk",
+];
+
+export const defaultCouncillorsInfo = Object.values(councillorInfo)
+  .flat()
+  .filter((councillor) => defaultCouncillors.includes(councillor.contact));

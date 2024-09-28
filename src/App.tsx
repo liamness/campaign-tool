@@ -16,7 +16,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { councillorInfo } from "./councillors";
+import {
+  councillorInfo,
+  defaultCouncillors,
+  defaultCouncillorsInfo,
+} from "./councillors";
 import {
   emailBodyTemplate,
   emailSubject,
@@ -29,11 +33,6 @@ const mayor = {
   name: "Mayor Caroline Woodley",
   party: "Labour",
   contact: "mayor@hackney.gov.uk",
-};
-const transportLead = {
-  name: "Cllr Sarah Joanna Young",
-  party: "Labour",
-  contact: "sarah.young@hackney.gov.uk",
 };
 // Globally styling components with Chakra seems finicky, so doing this
 const commonCardProps = {
@@ -54,10 +53,13 @@ function App() {
   const [senderName, setSenderName] = useState("");
   const [senderAddress, setSenderAddress] = useState("");
   const [ward, setWard] = useState<Ward | "">("");
-  const recipients = [mayor, transportLead];
+  const recipients = [mayor, ...defaultCouncillorsInfo];
 
   if (ward) {
-    recipients.push(...councillorInfo[ward]);
+    const wardCouncillors = councillorInfo[ward].filter(
+      (councillor) => !defaultCouncillors.includes(councillor.contact)
+    );
+    recipients.push(...wardCouncillors);
   }
   const emails = recipients.map((recipient) => recipient.contact);
   const recipientNames = recipients.map((recipient) => recipient.name);
@@ -118,9 +120,9 @@ function App() {
 
             <Text>
               Once you've completed those steps, click below and you will be
-              sent to your email client. The mayor, transport lead and your
-              local councillors will be set as receipients, and our suggested
-              text to send will be pre-filled.
+              sent to your email client. The mayor, transport lead, cabinet
+              members and your local councillors will be set as receipients, and
+              our suggested text to send will be pre-filled.
             </Text>
 
             <Text>

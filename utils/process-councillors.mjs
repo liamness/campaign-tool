@@ -12,8 +12,6 @@ const result = rawData.features.reduce((wardData, feature) => {
     };
 
     if (!councillor.contact) continue;
-    // Will include transport lead by default, so skip
-    if (councillor.contact === "sarah.young@hackney.gov.uk") continue;
 
     councillors.push(councillor);
   }
